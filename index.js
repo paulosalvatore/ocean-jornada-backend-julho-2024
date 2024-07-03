@@ -19,4 +19,13 @@ app.get('/item', function (req, res) {
   res.send(lista)
 })
 
+// Sinalizamos para o Express que vamos usar JSON no Body
+app.use(express.json())
+
+// Create - [POST] /item
+app.post('/item', function (req, res) {
+  console.log(req.body)
+  res.send('Create')
+})
+
 app.listen(3000)
